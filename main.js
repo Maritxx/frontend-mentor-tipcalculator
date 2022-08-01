@@ -42,7 +42,6 @@ $(document).ready(function () {
 		//Runs function (which grabs the value of input) when a key is pressed.
 		$billAmount = $("input#bill-amount").val();
 		//Takes the input from the Bill-amount input.
-		console.log($billAmount);
 	});
 
 
@@ -50,7 +49,6 @@ $(document).ready(function () {
 	//Runs function (which grabs the value of input) when a key is pressed.
 		$peopleNumber = $(this).val();
 		//Changes variable when there is an amount of people entered into the input.
-		console.log($peopleNumber)
 	});
 
 
@@ -58,18 +56,14 @@ $(document).ready(function () {
 		//Makes the button__tips divs clickable.
 		var $tipPercentage = ($(this).data("tip-percent") / 100);
 		//Grabs data of the tip-buttons and divides it by 100.
-		console.log($tipPercentage);
 
 		var $tipAmount = (($billAmount * $tipPercentage) / $peopleNumber).toFixed(2);
 		console.log($tipAmount);
 		//Calculates tip amount.
 
-		var $totalBill = (($billAmount / $peopleNumber) + $tipAmount);
+		var $totalBill = ($billAmount + $tipAmount) / $peopleNumber.toFixed(2);
 		console.log($totalBill);
 	});
-
-
-
 
 });
 
