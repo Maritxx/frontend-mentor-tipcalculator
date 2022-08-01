@@ -26,3 +26,31 @@ $(window).on("load resize orientationchange", function () {
 //The .on action attaches one or more event handlers to the selected element.
 //The function within the .on action specifies that it needs a function to run.
 //Runs the pageHeight function when the page gets loaded, resized or if the orientation (portrait or landscape) is changed. 
+
+
+
+$(document).ready(function () {
+//Will only make the code run once the page is fully loaded.	
+	
+	var $billAmount = $("input#bill-amount").val();
+	console.log($billAmount);
+	//Takes the input from the Bill-amount input.
+
+
+	var $peopleNumber = $("input#people-number").val();
+	console.log($peopleNumber);
+	//Takes the input from the number of People input.
+
+
+	$("div.button__tips").click(function() {
+		//Makes the button__tips divs clickable.
+		var $tipAmount = $(this).data("tip-percent");
+		//Grabs data of the tip-buttons.
+		console.log($tipAmount);
+	});
+
+	
+
+});
+
+

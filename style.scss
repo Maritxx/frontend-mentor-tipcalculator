@@ -29,6 +29,11 @@ h1 {
 	text-transform: uppercase;
 	max-width: 80px;
 	margin: 0 auto;
+	padding: 40px 0px;
+
+	@media all and (min-width: 782px) {
+		padding: 100px 0px;
+	}
 }
 
 .input__title {
@@ -89,13 +94,13 @@ h1 {
 		position: relative;
 
 		input {
-			padding-left: 21px;
+			padding-left: 39px;
 		}
 
 		&::before {
 		position: absolute;
 		content: url("img/icon-dollar.svg");
-		left: 10px;
+		left: 20px;
 		top: 37.5px;
 		}
 	}
@@ -109,13 +114,13 @@ h1 {
 		position: relative;
 
 		input {
-			padding-left: 23px;
+			padding-left: 38px;
 		}
 
 		&::before {
 			position: absolute;
 			content: url(img/icon-person.svg);
-			left: 10px;
+			left: 20px;
 			top: 38px;
 		}
 	}
