@@ -34,9 +34,8 @@ $(document).ready(function () {
 //Will only make the code run once the page is fully loaded.	
 
 	var $billAmount = $("input#bill-amount");
-	var $peopleNumber = 1; 
-	//Sets initial value of People Number to 1.
-
+	var $peopleNumber = $("input#people-number");
+	var $tipPercentage = ($("div.button__tips").data("tip-percent") / 100);
 
 
 	$("input#bill-amount").keyup(function() {
@@ -55,22 +54,14 @@ $(document).ready(function () {
 
 	$("div.button__tips").click(function() {
 		//Makes the button__tips divs clickable.
-		var $tipPercentage = ($(this).data("tip-percent") / 100);
-		//Grabs data of the tip-buttons and divides it by 100.
 
-		calculateTip();
-		calculateTotal(); 
-	});
-
-
-	function calculateTip () {
 		var $tipAmount = (($billAmount * $tipPercentage) / $peopleNumber).toFixed(2);
-	}
+		console.log($tipAmount);
+		//Calculates tip amount.
 
-
-	function calculateTotal () {
 		var $totalBill = (($billAmount + $tipAmount) / $peopleNumber).toFixed(2);
-	}
+		console.log($totalBill);
+	});
 
 });
 
