@@ -29,17 +29,25 @@ $(window).on("load resize orientationchange", function () {
 
 
 
+
 $(document).ready(function () {
 //Will only make the code run once the page is fully loaded.	
 	
-	var $billAmount = $("input#bill-amount").val();
-	console.log($billAmount);
-	//Takes the input from the Bill-amount input.
+	$("input#bill-amount").keyup(function() {
+		//Runs function (which grabs the value of input) when a key is pressed.
+		var $billAmount = $("input#bill-amount").val();
+		//Takes the input from the Bill-amount input.
+	});
 
 
-	var $peopleNumber = $("input#people-number").val();
-	console.log($peopleNumber);
-	//Takes the input from the number of People input.
+	$("input#people-number").keyup(function() {
+	//Runs function (which grabs the value of input) when a key is pressed.
+		var $peopleNumber = 1; 
+		//Sets initial value of People Number to 1.
+		$peopleNumber = $(this).val();
+		//Changes variable when there is an amount of people entered into the input.
+		console.log($peopleNumber)
+	});
 
 
 	$("div.button__tips").click(function() {
@@ -48,8 +56,6 @@ $(document).ready(function () {
 		//Grabs data of the tip-buttons and divides it by 100.
 		console.log($tipAmount);
 	});
-
-	
 
 });
 
