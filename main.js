@@ -61,7 +61,7 @@ $(document).ready(function () {
 		console.log($tipAmount);
 		//Calculates tip amount.
 
-		var $totalBill = ($billAmount + $tipAmount) / $peopleNumber.toFixed(2);
+		var $totalBill = (($billAmount + $tipAmount) / $peopleNumber).toFixed(2);
 		console.log($totalBill);
 	});
 
