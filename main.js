@@ -36,7 +36,7 @@ $(document).ready(function() {
 	var $billAmount;
 
 	$("input#bill-amount").keyup(function() {
-		var $billAmount = $("input#bill-amount").val();
+		$billAmount = $("input#bill-amount").val();
 	});
 
 	console.log($billAmount);
