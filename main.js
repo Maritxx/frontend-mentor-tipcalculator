@@ -30,12 +30,11 @@ $(window).on("load resize orientationchange", function () {
 
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 //Will only make the code run once the page is fully loaded.	
 
-	var $billAmount = $("input#bill-amount");
-	var $peopleNumber = $("input#people-number");
-	var $tipPercentage = ($("div.button__tips").data("tip-percent") / 100);
+	var $billAmount;
+	var $peopleNumber;
 
 
 	$("input#bill-amount").keyup(function() {
@@ -54,6 +53,7 @@ $(document).ready(function () {
 
 	$("div.button__tips").click(function() {
 		//Makes the button__tips divs clickable.
+		var $tipPercentage = ($(this).data("tip-percent") / 100);
 
 		var $tipAmount = (($billAmount * $tipPercentage) / $peopleNumber).toFixed(2);
 		console.log($tipAmount);
