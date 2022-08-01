@@ -32,12 +32,7 @@ $(window).on("load resize orientationchange", function () {
 
 $(document).ready(function() {
 //Will only make the code run once the page is fully loaded.	
+	
+	
 
-	var $billAmount;
-
-	$("input#bill-amount").keyup(function() {
-		$billAmount = $("input#bill-amount").val();
-	});
-
-	console.log($billAmount);
 });
