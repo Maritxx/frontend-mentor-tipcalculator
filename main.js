@@ -32,10 +32,11 @@ $(window).on("load resize orientationchange", function () {
 
 $(document).ready(function () {
 //Will only make the code run once the page is fully loaded.	
-	
+
 	var $billAmount = $("input#bill-amount");
 	var $peopleNumber = 1; 
 	//Sets initial value of People Number to 1.
+
 
 
 	$("input#bill-amount").keyup(function() {
@@ -57,13 +58,19 @@ $(document).ready(function () {
 		var $tipPercentage = ($(this).data("tip-percent") / 100);
 		//Grabs data of the tip-buttons and divides it by 100.
 
-		var $tipAmount = (($billAmount * $tipPercentage) / $peopleNumber).toFixed(2);
-		console.log($tipAmount);
-		//Calculates tip amount.
-
-		var $totalBill = (($billAmount + $tipAmount) / $peopleNumber).toFixed(2);
-		console.log($totalBill);
+		calculateTip();
+		calculateTotal(); 
 	});
+
+
+	function calculateTip () {
+		var $tipAmount = (($billAmount * $tipPercentage) / $peopleNumber).toFixed(2);
+	}
+
+
+	function calculateTotal () {
+		var $totalBill = (($billAmount + $tipAmount) / $peopleNumber).toFixed(2);
+	}
 
 });
 
