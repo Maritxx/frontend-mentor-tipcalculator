@@ -44,8 +44,8 @@ $(document).ready(function () {
 
 	$("div.button__tips").click(function() {
 		//Makes the button__tips divs clickable.
-		var $tipAmount = $(this).data("tip-percent");
-		//Grabs data of the tip-buttons.
+		var $tipAmount = ($(this).data("tip-percent") / 100);
+		//Grabs data of the tip-buttons and divides it by 100.
 		console.log($tipAmount);
 	});
 
