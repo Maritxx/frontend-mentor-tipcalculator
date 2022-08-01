@@ -70,12 +70,32 @@ h1 {
 
 .input__container--bill {
   padding-bottom: 40px;
+  position: relative;
+}
+.input__container--bill input {
+  padding-left: 21px;
+}
+.input__container--bill::before {
+  position: absolute;
+  content: url("img/icon-dollar.svg");
+  left: 10px;
+  top: 37.5px;
 }
 .input__container--tip {
   padding-bottom: 40px;
 }
 .input__container--people {
   padding-bottom: 40px;
+  position: relative;
+}
+.input__container--people input {
+  padding-left: 23px;
+}
+.input__container--people::before {
+  position: absolute;
+  content: url(img/icon-person.svg);
+  left: 10px;
+  top: 38px;
 }
 
 .tip-button__holder {
@@ -127,28 +147,6 @@ input {
 input:focus-visible {
   outline: 2px solid var(--button-active);
   color: var(--button-primary);
-}
-
-#bill-amount {
-  position: relative;
-  padding-left: 21px;
-}
-#bill-amount::before {
-  position: absolute;
-  content: url("img/icon-dollar.svg");
-  left: 10px;
-  top: 11.5px;
-}
-
-#people-number {
-  position: relative;
-  padding-left: 23px;
-}
-#people-number::before {
-  position: absolute;
-  content: url(img/icon-person.svg);
-  left: 10px;
-  top: 12px;
 }
 
 /*---Output*/

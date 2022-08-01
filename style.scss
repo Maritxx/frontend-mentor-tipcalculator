@@ -86,6 +86,18 @@ h1 {
 .input__container {
 	&--bill {
 		padding-bottom: 40px;
+		position: relative;
+
+		input {
+			padding-left: 21px;
+		}
+
+		&::before {
+		position: absolute;
+		content: url("img/icon-dollar.svg");
+		left: 10px;
+		top: 37.5px;
+		}
 	}
 
 	&--tip {
@@ -94,6 +106,18 @@ h1 {
 
 	&--people {
 		padding-bottom: 40px;
+		position: relative;
+
+		input {
+			padding-left: 23px;
+		}
+
+		&::before {
+			position: absolute;
+			content: url(img/icon-person.svg);
+			left: 10px;
+			top: 38px;
+		}
 	}
 }
 
@@ -156,30 +180,6 @@ input {
 }
 
 
-#bill-amount {
-	position: relative;
-	padding-left: 21px;
-
-	&::before {
-		position: absolute;
-		content: url("img/icon-dollar.svg");
-		left: 10px;
-		top: 11.5px;
-	}
-}
-
-
-#people-number {
-	position: relative;
-	padding-left: 23px;
-
-	&::before {
-		position: absolute;
-		content: url(img/icon-person.svg);
-		left: 10px;
-		top: 12px;
-	}
-}
 
 
 
