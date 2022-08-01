@@ -88,6 +88,11 @@ textarea, input[type="text"], input[type="button"], input[type="submit"], input[
   border-radius: 0;
 }
 
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
