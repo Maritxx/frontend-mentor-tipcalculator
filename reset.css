@@ -82,7 +82,7 @@ q:after {
   font-style: normal;
 }
 
-textarea, input[type="text"], input[type="button"], input[type="submit"], input[type="reset"], input[type="search"], input[type="password"] {
+textarea, input[type="text"], input[type="button"], input[type="submit"], input[type="reset"], input[type="search"], input[type="password"] input[type="number"] {
   -webkit-appearance: none;
   appearance: none;
   border-radius: 0;
