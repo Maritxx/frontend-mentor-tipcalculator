@@ -33,9 +33,14 @@ $(window).on("load resize orientationchange", function () {
 $(document).ready(function () {
 //Will only make the code run once the page is fully loaded.	
 	
+	var $billAmount = $("input#bill-amount");
+	var $peopleNumber = 1; 
+	//Sets initial value of People Number to 1.
+
+
 	$("input#bill-amount").keyup(function() {
 		//Runs function (which grabs the value of input) when a key is pressed.
-		var $billAmount = $("input#bill-amount").val();
+		$billAmount = $("input#bill-amount").val();
 		//Takes the input from the Bill-amount input.
 		console.log($billAmount);
 	});
@@ -43,8 +48,6 @@ $(document).ready(function () {
 
 	$("input#people-number").keyup(function() {
 	//Runs function (which grabs the value of input) when a key is pressed.
-		var $peopleNumber = 1; 
-		//Sets initial value of People Number to 1.
 		$peopleNumber = $(this).val();
 		//Changes variable when there is an amount of people entered into the input.
 		console.log($peopleNumber)
