@@ -28,17 +28,65 @@
 				<div class="calculator__holder--input">
 					<div class="input__container--bill">
 						<label class="input__title">Bill</label>
-						<input type="number" value="0">
+						<input id="bill-amount" type="number" placeholder="0">
+					</div>
+					<div class="input__container--tip">
+						<label class="input__title">Select Tip %</label>
+						<div class="tip-button__holder">
+							<div class="button button__tips" data-tip-percent="5">
+								<span>5%</span>
+							</div>
+							<div class="button button__tips" data-tip-percent="10">
+								<span>10%</span>
+							</div>
+							<div class="button button__tips" data-tip-percent="15">
+								<span>15%</span>
+							</div>
+							<div class="button button__tips" data-tip-percent="25">
+								<span>25%</span>
+							</div>
+							<div class="button button__tips" data-tip-percent="50">
+								<span>50%</span>
+							</div>
+							<div class="button button__tips">
+								<input id="tip-percentage" type="number" placeholder="Custom"> 
+							</div>
+						</div>
+					</div>
+					<div class="input__container--people">
+						<label class="input__title">Bill</label>
+						<input id="people-number" type="number" placeholder="0">
 					</div>
 				</div>
+
 				<div class="calculator__holder--output">
+					<div class="output__container--tip">
+						<div class="output__content--text">
+							<span class="output__title">Tip Amount</span>
+							<span class="output__subtitle">/ person</span>
+						</div>
+						<div class="output__content--calculation">
+							<span class="output__calculation" id="your-tip">$0.00</span>
+						</div>
+					</div>
+					<div class="output__container--total">
+						<div class="output__content--text">
+							<span class="output__title">Total</span>
+							<span class="output__subtitle">/ person</span>
+						</div>
+						<div class="output__content--calculation">
+							<span class="output__calculation" id="your-total">$0.00</span>
+						</div>
+					</div>
+					<div class="button button__reset">
+						<span>Reset</span>
+					</div>
 				</div>
 			</div>
 		</section>
 	</main>
 
 	<footer>
-
 		<script src="main.js"></script>
 	</footer>
 </body>

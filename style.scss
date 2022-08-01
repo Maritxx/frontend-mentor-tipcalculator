@@ -1,1 +1,88 @@
+/*Global Styles*/
+body {
+	background-color: var(--bg-primary);
+	font-family: var(--main-font);
+	font-weight: 700;
+}
+
+
+.button {
+	span {
+		font-size: 1.5rem;
+		padding: 10px;
+		border-radius: 10px;
+		display: block;
+	}
+	
+	&__tips {
+		span {
+			color: var(--bg-secondary);
+			background-color: var(--button-primary);
+
+			&:hover {
+				background-color: var(--bg-primary);
+				color: var(--button-primary);
+			}
+
+			&:focus {
+				background-color: var(--button-active);
+				color: var(--button-primary);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/*Font Styles*/
+h1 {
+	color: var(--button-primary);
+	font-size: 1.5rem;
+	letter-spacing: 0.3rem;
+	text-transform: uppercase;
+	max-width: 120px;
+	text-align: center;
+}
+
+.input__title {
+	color: var(--input-primary);
+}
+
+.output__title {
+	color: var(--bg-secondary);
+}
+
+.output__subtitle {
+	color: var(--text-secondary);
+	font-size: 0.8125rem;
+}
+
+.output__calculation {
+	font-size: 3rem;
+	color: var(--button-active);
+}
+
+
+
+
+/*Tip Calculator Styling*/
+.tip-calculator {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+.calculator__holder {
+	background-color: var(--bg-secondary);
+	border-radius: 25px;
+	padding: 40px;
+
+	@media all and (min-width: 782px) {
+		display: flex;
+	}
+}
+
 
