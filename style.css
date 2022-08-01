@@ -129,6 +129,28 @@ input:focus-visible {
   color: var(--button-primary);
 }
 
+#bill-amount {
+  position: relative;
+  padding-left: 21px;
+}
+#bill-amount::before {
+  position: absolute;
+  content: url("img/icon-dollar.svg");
+  left: 10px;
+  top: 11.5px;
+}
+
+#people-number {
+  position: relative;
+  padding-left: 23px;
+}
+#people-number::before {
+  position: absolute;
+  content: url(img/icon-person.svg);
+  left: 10px;
+  top: 12px;
+}
+
 /*---Output*/
 .calculator__holder--output {
   padding: 20px;
@@ -155,10 +177,10 @@ input:focus-visible {
   align-items: center;
 }
 
-.button__output {
+.button__reset {
   margin-top: auto;
 }
-.button__output span {
+.button__reset span {
   background-color: var(--button-active);
   color: var(--button-primary);
   text-transform: uppercase;

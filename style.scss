@@ -156,6 +156,30 @@ input {
 }
 
 
+#bill-amount {
+	position: relative;
+	padding-left: 21px;
+
+	&::before {
+		position: absolute;
+		content: url("img/icon-dollar.svg");
+		left: 10px;
+		top: 11.5px;
+	}
+}
+
+
+#people-number {
+	position: relative;
+	padding-left: 23px;
+
+	&::before {
+		position: absolute;
+		content: url(img/icon-person.svg);
+		left: 10px;
+		top: 12px;
+	}
+}
 
 
 
@@ -188,7 +212,7 @@ input {
 }
 
 
-.button__output {
+.button__reset {
 	margin-top: auto;
 
 	span {
