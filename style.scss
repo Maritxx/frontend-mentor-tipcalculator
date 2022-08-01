@@ -9,26 +9,10 @@ body {
 .button {
 	span {
 		font-size: 1.5rem;
-		padding: 10px;
-		border-radius: 10px;
+		text-align: center;
+		border-radius: 5px;
 		display: block;
-	}
-	
-	&__tips {
-		span {
-			color: var(--bg-secondary);
-			background-color: var(--button-primary);
-
-			&:hover {
-				background-color: var(--bg-primary);
-				color: var(--button-primary);
-			}
-
-			&:focus {
-				background-color: var(--button-active);
-				color: var(--button-primary);
-			}
-		}
+		width: 100%;
 	}
 }
 
@@ -43,12 +27,12 @@ h1 {
 	font-size: 1.5rem;
 	letter-spacing: 0.3rem;
 	text-transform: uppercase;
-	max-width: 120px;
-	text-align: center;
+	max-width: 90px;
+	margin: 0 auto;
 }
 
 .input__title {
-	color: var(--input-primary);
+	color: var(--text-secondary);
 }
 
 .output__title {
@@ -64,6 +48,8 @@ h1 {
 	font-size: 3rem;
 	color: var(--button-active);
 }
+
+
 
 
 
@@ -86,3 +72,53 @@ h1 {
 }
 
 
+/*---Input*/
+.tip-button__holder {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.button__tips {
+	flex: 0 1 50%;
+	padding: 5px 0px;
+
+	@media all and (min-width: 782px) {
+		flex: 0 1 33%;
+	}
+
+	span {
+		color: var(--bg-secondary);
+		background-color: var(--button-primary);
+
+		&:hover {
+			background-color: var(--bg-primary);
+			color: var(--button-primary);
+		}
+
+		&:focus {
+			background-color: var(--button-active);
+			color: var(--button-primary);
+		}
+	}
+}
+
+
+
+
+/*---Output*/
+.calculator__holder--output {
+	padding: 20px;
+	background-color: var(--button-primary);
+	border-radius: 15px;
+
+	@media all and (min-width: 782px) {
+		padding: 40px;
+	}
+}
+
+
+.output__container--tip, .output__container--total {
+	display: flex;
+	justify-content: space-between;
+}
