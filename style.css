@@ -19,12 +19,14 @@ h1 {
   font-size: 1.5rem;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
-  max-width: 90px;
+  max-width: 80px;
   margin: 0 auto;
 }
 
 .input__title {
   color: var(--text-secondary);
+  display: block;
+  padding-bottom: 10px;
 }
 
 .output__title {
@@ -64,6 +66,16 @@ h1 {
     flex: 0 1 50%;
     margin-right: 50px;
   }
+}
+
+.input__container--bill {
+  padding-bottom: 40px;
+}
+.input__container--tip {
+  padding-bottom: 40px;
+}
+.input__container--people {
+  padding-bottom: 40px;
 }
 
 .tip-button__holder {
@@ -127,6 +139,8 @@ input:focus-visible {
   .calculator__holder--output {
     padding: 40px;
     flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -139,6 +153,15 @@ input:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.button__output {
+  margin-top: auto;
+}
+.button__output span {
+  background-color: var(--button-active);
+  color: var(--button-primary);
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */
