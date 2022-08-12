@@ -52,40 +52,42 @@ let totalEl = document.getElementById("your-total");
 
 
 
-function calculateOutput() {
+function calcFivePercent() {
+	let tipAmountSum = (bill / people) * 0.05; 
 	let totalSum = (bill / people) + tipAmountSum;
 	tipAmountEl.textContent = "$" + tipAmountSum.toFixed(2);
 	totalEl.textContent = "$" + totalSum.toFixed(2);
 }
 
 
-
-function calcFivePercent() {
-	let tipAmountSum = (bill / people) * 0.05; 
-	calculateOutput()
-}
-
-
 function calcTenPercent() {
 	let tipAmountSum = (bill / people) * 0.10; 
-	calculateOutput()
+	let totalSum = (bill / people) + tipAmountSum;
+	tipAmountEl.textContent = "$" + tipAmountSum.toFixed(2);
+	totalEl.textContent = "$" + totalSum.toFixed(2);
 }
 
 
 function calcFifteenPercent() {
 	let tipAmountSum = (bill / people) * 0.15; 
-	calculateOutput()
+	let totalSum = (bill / people) + tipAmountSum;
+	tipAmountEl.textContent = "$" + tipAmountSum.toFixed(2);
+	totalEl.textContent = "$" + totalSum.toFixed(2);
 }
 
 
 function calcTwentyfivePercent() {
 	let tipAmountSum = (bill / people) * 0.25; 
-	calculateOutput()
+	let totalSum = (bill / people) + tipAmountSum;
+	tipAmountEl.textContent = "$" + tipAmountSum.toFixed(2);
+	totalEl.textContent = "$" + totalSum.toFixed(2);
 }
 
 
 function calcFiftyPercent() {
 	let tipAmountSum = (bill / people) * 0.50; 
-	calculateOutput()
+	let totalSum = (bill / people) + tipAmountSum;
+	tipAmountEl.textContent = "$" + tipAmountSum.toFixed(2);
+	totalEl.textContent = "$" + totalSum.toFixed(2);
 }
 
