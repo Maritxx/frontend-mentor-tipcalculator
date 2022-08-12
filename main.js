@@ -30,9 +30,11 @@ $(window).on("load resize orientationchange", function () {
 
 
 
-$(document).ready(function() {
-//Will only make the code run once the page is fully loaded.	
-	
-	
+let bill = document.getElementById("bill-amount").value;
+let people = document.getElementById("people-number").value;
+console.log(bill)
+console.log(people)
 
-});
+function calcFivePercent() {
+	console.log("button is clicked")
+}
