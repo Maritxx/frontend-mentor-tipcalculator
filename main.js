@@ -35,8 +35,7 @@ let bill = billInput.value;
 
 billInput.oninput = function() {
 	bill = billInput.value;
-	console.log("billinput change works!")
-}
+};
 
 
 const peopleInput = document.getElementById("people-number");
@@ -44,15 +43,20 @@ let people = peopleInput.value;
 
 peopleInput.oninput = function() {
 	people = peopleInput.value;
-	console.log("peopleinput change works!")
-}
+};
 
 
+
+let tipAmountEl = document.getElementById("your-tip").textContent;
+let totalEl = document.getElementById("your-total").textContent;
 
 
 function calcFivePercent() {
-	console.log(bill)
-	console.log(people)
+	let tipAmountSum = (bill / people) * 0.05; 
+	let totalSum = (bill / people) + tipAmountSum;
+	console.log(tipAmountSum);
+	console.log(totalSum);
+	tipAmountEl = "$" + tipAmountSum.tofixed(2);
 }
 
 
