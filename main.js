@@ -30,11 +30,19 @@ $(window).on("load resize orientationchange", function () {
 
 
 
-let bill = document.getElementById("bill-amount").value;
-let people = document.getElementById("people-number").value;
-console.log(bill)
-console.log(people)
+let billInput = document.getElementById("bill-amount");
+let bill = billInput.value;
+let peopleInput = document.getElementById("people-number");
+let people = peopleInput.value;
+
+
+input.oninput = function() {
+	bill = billInput.value;
+	people = peopleInput.value;
+};
+
 
 function calcFivePercent() {
-	console.log("button is clicked")
+	console.log(bill)
+	console.log(people)
 }
