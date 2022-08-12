@@ -91,3 +91,16 @@ function calcFiftyPercent() {
 	totalEl.textContent = "$" + totalSum.toFixed(2);
 }
 
+
+function calcCustom() {
+	let customInput = document.getElementById("tip-percentage").value;
+	let customPercentage = customInput / 100;
+	console.log(customInput)
+	console.log(customPercentage)
+	let tipAmountSum = (bill / people) * customPercentage; 
+	let totalSum = (bill / people) + tipAmountSum;
+	tipAmountEl.textContent = "$" + tipAmountSum.toFixed(2);
+	totalEl.textContent = "$" + totalSum.toFixed(2);
+}
+
+
