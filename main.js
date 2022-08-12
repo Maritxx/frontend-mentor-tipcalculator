@@ -36,7 +36,7 @@ let peopleInput = document.getElementById("people-number");
 let people = peopleInput.value;
 
 
-input.oninput = function() {
+document.querySelectorAll("input").oninput = function() {
 	bill = billInput.value;
 	people = peopleInput.value;
 };
