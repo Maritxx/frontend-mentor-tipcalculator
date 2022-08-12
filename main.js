@@ -47,16 +47,14 @@ peopleInput.oninput = function() {
 
 
 
-let tipAmountEl = document.getElementById("your-tip").textContent;
-let totalEl = document.getElementById("your-total").textContent;
+let tipAmountEl = document.getElementById("your-tip");
+let totalEl = document.getElementById("your-total");
 
 
 function calcFivePercent() {
 	let tipAmountSum = (bill / people) * 0.05; 
 	let totalSum = (bill / people) + tipAmountSum;
-	console.log(tipAmountSum);
-	console.log(totalSum);
-	tipAmountEl = "$" + tipAmountSum.tofixed(2);
+	tipAmountEl.textContent = "$ " + tipAmountSum;
 }
 
 
