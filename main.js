@@ -56,7 +56,7 @@ function calculateTipAmount(element, percentage) {
 		document.getElementById("error__span").textContent = "Can't be zero";
 		document.getElementById("people-number").classList.add("error");
 	} else {
-		document.getElementsById("error__span").textContent = "";
+		document.getElementById("error__span").textContent = "";
 		document.getElementById("people-number").classList.remove("error");
 
 		let tipAmountSum = (bill / people) * percentage; 
