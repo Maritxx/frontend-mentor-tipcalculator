@@ -92,7 +92,8 @@ function inputTimeOut() {
 
 	timeOut = setTimeout(function () {
 		let customInput = document.getElementById("tip-percentage").value;
-		let percentage = customInput / 100;
+		percentage = customInput / 100;
+		element = document.getElementById("custom__button");
 		calculateTipAmount(element, percentage);
 	}, 1000);
 }
