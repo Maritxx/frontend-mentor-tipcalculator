@@ -53,18 +53,26 @@ let totalEl = document.getElementById("your-total");
 
 
 function calculateTipAmount(element, percentage) {
-	let tipAmountSum = (bill / people) * percentage; 
-	let totalSum = (bill / people) + tipAmountSum;
-	tipAmountEl.textContent = "$" + tipAmountSum.toFixed(2);
-	totalEl.textContent = "$" + totalSum.toFixed(2);
+	if (people == 0) {
+		document.getElementsByClasName("error__text").textContent = "Can't be zero";
+		document.getElementById("people-number").classList.add("error");
+	} else {
+		document.getElementsByClasName("error__text").textContent = "";
+		document.getElementById("people-number").classList.remove("error");
 
-	var elements = document.querySelectorAll(".button__tips");
+		let tipAmountSum = (bill / people) * percentage; 
+		let totalSum = (bill / people) + tipAmountSum;
+		tipAmountEl.textContent = "$" + tipAmountSum.toFixed(2);
+		totalEl.textContent = "$" + totalSum.toFixed(2);
 
-	for (let element of elements) {
-	element.classList.remove("active");
-	}
+		var elements = document.querySelectorAll(".button__tips");
 
-	element.classList.add("active");
+		for (let element of elements) {
+			element.classList.remove("active");
+		}
+
+		element.classList.add("active");
+	}	
 }
 
 

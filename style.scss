@@ -38,7 +38,7 @@ h1 {
 
 .input__title {
 	color: var(--text-secondary);
-	display: block;
+	display: inline-block;
 	padding-bottom: 10px;
 }
 
@@ -54,6 +54,11 @@ h1 {
 .output__calculation {
 	font-size: 3rem;
 	color: var(--button-active);
+}
+
+.error__text {
+	float: right;
+	color: #C96751
 }
 
 
@@ -115,6 +120,10 @@ h1 {
 
 		input {
 			padding-left: 38px;
+
+			&.error {
+				border: 2px solid #C96751;
+			}
 		}
 
 		&::before {

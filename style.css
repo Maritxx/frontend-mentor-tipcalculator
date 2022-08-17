@@ -31,7 +31,7 @@ h1 {
 
 .input__title {
   color: var(--text-secondary);
-  display: block;
+  display: inline-block;
   padding-bottom: 10px;
 }
 
@@ -47,6 +47,11 @@ h1 {
 .output__calculation {
   font-size: 3rem;
   color: var(--button-active);
+}
+
+.error__text {
+  float: right;
+  color: #C96751;
 }
 
 /*Tip Calculator Styling*/
@@ -96,6 +101,9 @@ h1 {
 }
 .input__container--people input {
   padding-left: 38px;
+}
+.input__container--people input.error {
+  border: 2px solid #C96751;
 }
 .input__container--people::before {
   position: absolute;
