@@ -58,10 +58,10 @@ function calculateTipAmount(element, percentage) {
 	tipAmountEl.textContent = "$" + tipAmountSum.toFixed(2);
 	totalEl.textContent = "$" + totalSum.toFixed(2);
 
-	const buttonElements = document.querySelectorAll(".button__tips");
+	var elements = document.querySelectorAll(".button__tips");
 
-	for (let buttonElement of buttonElements) {
-	buttonElement.classList.remove("active");
+	for (let element of elements) {
+	element.classList.remove("active");
 	}
 
 	element.classList.add("active");
