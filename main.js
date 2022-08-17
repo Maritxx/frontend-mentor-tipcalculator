@@ -42,6 +42,15 @@ const peopleInput = document.getElementById("people-number");
 let people = peopleInput.value;
 
 peopleInput.oninput = function() {
+	let isValid = peopleInput.checkValidity();
+	if (isValid === false) {
+		document.getElementById("error__span").textContent = "Your input is invalid";
+		document.getElementById("people-number").classList.add("error");
+	} else {
+		document.getElementById("error__span").textContent = "";
+		document.getElementById("people-number").classList.remove("error");
+	}
+	
 	people = peopleInput.value;
 };
 
