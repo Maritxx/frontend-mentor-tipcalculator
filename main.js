@@ -52,11 +52,19 @@ let totalEl = document.getElementById("your-total");
 
 
 
-function calculateTipAmount(percentage) {
+function calculateTipAmount(element, percentage) {
 	let tipAmountSum = (bill / people) * percentage; 
 	let totalSum = (bill / people) + tipAmountSum;
 	tipAmountEl.textContent = "$" + tipAmountSum.toFixed(2);
 	totalEl.textContent = "$" + totalSum.toFixed(2);
+
+	const buttonElements = document.querySelectorAll(".button__tips");
+
+	for (let buttonElement of buttonElements) {
+	buttonElement.classList.remove("active");
+	}
+
+	element.classList.add("active");
 }
 
 
@@ -70,5 +78,7 @@ function calcCustom() {
 	tipAmountEl.textContent = "$" + tipAmountSum.toFixed(2);
 	totalEl.textContent = "$" + totalSum.toFixed(2);
 }
+
+
 
 
