@@ -51,13 +51,12 @@ let tipAmountEl = document.getElementById("your-tip");
 let totalEl = document.getElementById("your-total");
 
 
-
 function calculateTipAmount(element, percentage) {
 	if (people == 0) {
-		document.getElementsByClassName("error__text").textContent = "Can't be zero";
+		document.getElementById("error__span").textContent = "Can't be zero";
 		document.getElementById("people-number").classList.add("error");
 	} else {
-		document.getElementsByClassName("error__text").textContent = "";
+		document.getElementsById("error__span").textContent = "";
 		document.getElementById("people-number").classList.remove("error");
 
 		let tipAmountSum = (bill / people) * percentage; 
