@@ -84,17 +84,16 @@ function calculateTipAmount(element, percentage) {
 }
 
 
-function calcCustom() {
-	let customInput = document.getElementById("tip-percentage").value;
-	let customPercentage = customInput / 100;
-	console.log(customInput)
-	console.log(customPercentage)
-	let tipAmountSum = (bill / people) * customPercentage; 
-	let totalSum = (bill / people) + tipAmountSum;
-	tipAmountEl.textContent = "$" + tipAmountSum.toFixed(2);
-	totalEl.textContent = "$" + totalSum.toFixed(2);
+var timeOut;
+
+
+function inputTimeOut() {
+	clearTimeout(timeOut)
+
+	timeOut = setTimeout(function () {
+		let customInput = document.getElementById("tip-percentage").value;
+		let percentage = customInput / 100;
+		calculateTipAmount(element, percentage);
+	}, 1000);
 }
-
-
-
 
