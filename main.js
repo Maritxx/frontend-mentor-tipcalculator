@@ -84,8 +84,7 @@ function calculateTipAmount(element, percentage) {
 }
 
 
-var timeOut;
-
+let timeOut;
 
 function inputTimeOut() {
 	clearTimeout(timeOut)
@@ -98,3 +97,16 @@ function inputTimeOut() {
 	}, 1000);
 }
 
+
+
+
+function resetCalculator() {
+	for (let element of elements) {
+			element.classList.remove("active");
+		}
+
+	tipAmountEl.value = "";
+	totalEl.value = "";
+	billInput.value = "";
+	peopleInput.value = "";
+}
