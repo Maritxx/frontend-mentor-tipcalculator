@@ -107,8 +107,8 @@ function resetCalculator() {
 			element.classList.remove("active");
 		}
 
-	tipAmountEl.textContent = "";
-	totalEl.textContent = "";
+	tipAmountEl.textContent = "$0.00";
+	totalEl.textContent = "$0.00";
 	billInput.value = "";
 	peopleInput.value = "";
 }
