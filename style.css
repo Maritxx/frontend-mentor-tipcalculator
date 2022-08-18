@@ -205,5 +205,9 @@ input:focus-visible {
   color: var(--button-primary);
   text-transform: uppercase;
 }
+.button__reset span:hover {
+  background-color: var(--bg-primary);
+  color: var(--button-primary);
+}
 
 /*# sourceMappingURL=style.css.map */

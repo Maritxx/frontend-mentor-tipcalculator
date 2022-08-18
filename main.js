@@ -101,12 +101,14 @@ function inputTimeOut() {
 
 
 function resetCalculator() {
+	var elements = document.querySelectorAll(".button__tips");
+
 	for (let element of elements) {
 			element.classList.remove("active");
 		}
 
-	tipAmountEl.value = "";
-	totalEl.value = "";
+	tipAmountEl.textContent = "";
+	totalEl.textContent = "";
 	billInput.value = "";
 	peopleInput.value = "";
 }
