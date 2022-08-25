@@ -111,4 +111,6 @@ function resetCalculator() {
 	totalEl.textContent = "$0.00";
 	bill = 0;
 	people = 0;
+	billInput.value = "";
+	peopleInput.value = "";
 }
