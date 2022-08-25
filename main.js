@@ -109,6 +109,6 @@ function resetCalculator() {
 
 	tipAmountEl.textContent = "$0.00";
 	totalEl.textContent = "$0.00";
-	billInput.value = "";
-	peopleInput.value = "";
+	bill = 0;
+	people = 0;
 }
